@@ -1,0 +1,122 @@
+.card-body {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.cocktail-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.cocktail-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon-star {
+
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.badge-green {
+  background-color: #5cb85c;
+}
+
+.badge-blue {
+  background-color: #5bc0de;
+}
+
+// DETAIL
+.detail-content {
+  display: flex;
+}
+
+.detail-left {
+  flex: 1;
+  margin-top: 2%;
+}
+
+.detail-right {
+  flex: 3;
+  padding-left: 20px;
+}
+
+.detail-right h3 {
+  display: flex;
+  align-items: center;
+}
+
+.detail-name{
+  font-weight: bold;
+  font-size: 20px;
+}
+.detail-right .icon-star {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.detail-right p {
+  margin-bottom: 10px;
+}
+
+.detail-right .badge {
+  margin-right: 10px;
+}
+
+.detail-right ul {
+  //list-style-type: none;
+  padding: 0;
+}
+
+.detail-right ul li {
+  margin-bottom: 5px;
+}
+
+.cocktail-image-square {
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  margin-top: 5%;
+}
+
+.btn-back {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+}
+

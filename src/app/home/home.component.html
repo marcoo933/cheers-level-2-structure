@@ -1,0 +1,7 @@
+<input type="text" placeholder="Cocktail name" [(ngModel)]="searchTerm" (input)="filterCocktails()">
+
+<div class="cocktail-list">
+  <div *ngFor="let cocktail of filteredCocktails" class="card" >
+    <app-cocktail [cocktail]="cocktail"></app-cocktail>
+  </div>
+</div>

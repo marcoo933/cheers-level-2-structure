@@ -1,0 +1,57 @@
+<div class="card-body" *ngIf="cocktail && !isDetail; else detail">
+  <img [src]="cocktail.imageUrl" alt="{{ cocktail.name }}" class="cocktail-image">
+  <div class="cocktail-details">
+
+    <div class="top-right">
+      <span class="icon-star" [class.active]="isFavorite" (click)="toggleFavorite(cocktail.id)">
+      </span>
+    </div>
+
+    <h3 [routerLink]="['/cocktail', cocktail.id]" class="clickable">{{ cocktail.name }}</h3>
+
+    <span class="badge" [ngClass]="{'badge-green': !cocktail.isAlcoholic, 'badge-blue': cocktail.isAlcoholic}">
+      {{ cocktail.isAlcoholic ? 'Alcoholic' : 'Non alcoholic' }}
+    </span>
+
+    <p>{{ cocktail.ingredients.join(' | ') }}</p>
+
+  </div>
+</div>
+
+<ng-template #detail>
+  <div class="detail-body" *ngIf="cocktail && isDetail">
+    <div class="detail-content">
+      <div class="detail-left">
+        <a routerLink="/home" class="btn-back">Back to Home</a>
+        <img [src]="cocktail.imageUrl" alt="{{ cocktail.name }}" class="cocktail-image-square">
+      </div>
+      <div class="detail-right">
+
+        <p>
+          <span class="detail-name">{{ cocktail.name }}</span>
+          <span class="icon-star" [class.active]="isFavorite" (click)="toggleFavorite(cocktail.id)">
+          </span>
+        </p>
+
+        <p>
+          <strong>Type:</strong>
+          <span class="badge" [ngClass]="{'badge-green': !cocktail.isAlcoholic, 'badge-blue': cocktail.isAlcoholic}">
+            {{ cocktail.isAlcoholic ? 'Alcoholic' : 'Non alcoholic' }}
+          </span>
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong>
+        <ul>
+          <li *ngFor="let ingredient of cocktail.ingredients">{{ ingredient }}</li>
+        </ul>
+
+        <p>
+          <strong>Instructions:</strong>
+          <span>{{ cocktail.instructions }}</span>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</ng-template>
