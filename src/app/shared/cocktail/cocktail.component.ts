@@ -15,7 +15,7 @@ import { HomeComponent } from '../../home/home.component';
 })
 export class CocktailComponent {
   @Input() cocktail: Cocktail;
-  isFavorite: boolean;
+  isFavorite: boolean = false;
   cocktailId: string;
   favorites: string[] = [];
   isDetail: boolean = false;
@@ -33,20 +33,20 @@ export class CocktailComponent {
         this.isDetail = true;
         this.coktailService.getCocktailDetail(this.cocktailId).subscribe(cocktail => {
           this.cocktail = cocktail
-          this.updateFavorite();
+          // this.updateFavorite();
         });
       }
     });
-    if (this.cocktail) this.updateFavorite();
+    // if (this.cocktail) this.updateFavorite();
   }
 
   toggleFavorite(cocktailId: string): void {
-    this.coktailService.favorite = cocktailId;
-    this.updateFavorite();
+    // this.coktailService.favorite = cocktailId;
+    // this.updateFavorite();
   }
 
   updateFavorite() {
-    this.isFavorite = this.coktailService.isFavorite(this.cocktail.id);
+    //this.isFavorite = this.coktailService.isFavorite(this.cocktail.id);
   }
 
 
