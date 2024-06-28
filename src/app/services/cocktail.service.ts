@@ -8,7 +8,7 @@ import { Cocktail } from '../shared/interface';
 })
 export class CocktailService {
   private apiUrl: string = '/cockails';
-  private favorites: string[];
+  private favorites: string[] = [];
 
   set favorite(cocktailId: string) {
     const index = this.favorites.indexOf(cocktailId);
@@ -39,6 +39,7 @@ export class CocktailService {
   }
 
   isFavorite(cocktailId: string): boolean {
-    return  this.favorites.includes(cocktailId);
+    return this.favorites.includes(cocktailId);
+
   }
 }
