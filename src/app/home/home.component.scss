@@ -1,18 +1,18 @@
 .cocktail-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // Grid layout with responsive columns
+  gap: 20px; // Gap between grid items
 }
 
 .card {
-  position: relative; /* Per posizionare l'icona stella */
+  position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Box shadow for card
+  min-height: 250px; // Minimum height for card content
 }
 
 .no-data-container {
@@ -20,25 +20,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  margin-top: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  color: #555;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  text-align: center;
-  transition: all 0.3s ease;
+  padding: 20px; // Padding inside container
+  margin-top: 20px; // Margin on top of container
+  border: 2px solid #ccc; // Border around container
+  border-radius: 10px; // Border radius
+  background-color: #f9f9f9; // Background color
+  color: #555; // Text color
+  font-family: 'Arial', sans-serif; // Font family
+  font-size: 18px; // Font size
+  text-align: center; // Center-align text
+  transition: all 0.3s ease; // Smooth transition for hover or state changes
 }
 
 .no-data-icon {
-  font-size: 40px;
-  color: #ffcc00;
-  margin-bottom: 10px;
+  font-size: 40px; // Icon size
+  color: #ffcc00; // Icon color
+  margin-bottom: 10px; // Margin below icon
 }
 
 .no-data-message {
-  font-size: 16px;
-  color: #333;
+  font-size: 16px; // Message font size
+  color: #333; // Message text color
 }

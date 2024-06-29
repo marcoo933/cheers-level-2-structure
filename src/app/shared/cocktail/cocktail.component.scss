@@ -1,147 +1,121 @@
 .card-body {
-  display: flex;
-  align-items: center;
-  padding: 20px;
+  display: flex; /* Flexbox container for card body */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Padding around the card body */
 }
 
 .cocktail-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 20px;
+  width: 100px; /* Fixed width for cocktail image */
+  height: 100px; /* Fixed height for cocktail image */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 50%; /* Rounded shape for the image */
+  margin-right: 20px; /* Spacing between image and details */
 }
 
 .cocktail-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 1; /* Take remaining space in flex container */
+  display: flex; /* Nested flex container for details */
+  flex-direction: column; /* Stack details vertically */
 }
 
 .top-right {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: absolute; /* Absolute positioning */
+  top: 10px; /* Position from the top */
+  right: 10px; /* Position from the right */
 }
 
 .icon-star {
-
-  cursor: pointer;
+  font-size: 24px; /* Icon size */
+  cursor: pointer; /* Pointer cursor for interaction */
 }
 
 .clickable {
-  cursor: pointer;
+  cursor: pointer; /* Pointer cursor for clickable elements */
 }
 
 .clickable:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover for clickable elements */
 }
 
 .badge {
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 12px;
-  margin-bottom: 5px;
+  display: inline-block; /* Inline block element */
+  padding: 5px 10px; /* Padding inside the badge */
+  border-radius: 3px; /* Rounded corners */
+  color: white; /* Text color */
+  font-size: 14px; /* Font size */
 }
 
 .badge-green {
-  background-color: #5cb85c;
+  background-color: #28a745; /* Green background color for badge */
 }
 
 .badge-blue {
-  background-color: #5bc0de;
+  background-color: #007bff; /* Blue background color for badge */
 }
 
 .detail-body {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-top: 20px;
+  background-color: #f9f9f9; /* Background color */
+  padding: 20px; /* Padding around the detail body */
+  border: 1px solid #ddd; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 20px; /* Margin from the top */
 }
 
 .detail-content {
-  display: flex;
+  display: flex; /* Flexbox container for detail content */
 }
 
 .detail-left {
-  flex: 1;
-  text-align: center;
+  flex: 1; /* Take 1/3 of the available space */
+  text-align: center; /* Center align text */
 }
 
 .detail-right {
-  flex: 2;
-  padding-left: 20px;
+  flex: 2; /* Take 2/3 of the available space */
+  padding-left: 20px; /* Left padding */
 }
 
 .btn-back {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 10px;
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  display: inline-flex; /* Inline flex container */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Margin at the bottom */
+  padding: 5px 10px; /* Padding inside the button */
+  background-color: #007bff; /* Blue background color */
+  color: white; /* Text color */
+  text-decoration: none; /* No underline for links */
+  border-radius: 5px; /* Rounded corners */
 }
 
 .btn-back i {
-  margin-right: 5px; /* Spazio tra l'icona e il testo */
+  margin-right: 5px; /* Margin between icon and text */
 }
 
 .btn-back:hover {
-  background-color: #0056b3; /* Cambia colore al passaggio del mouse */
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 .cocktail-image-square {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Fixed width for square image */
+  height: 200px; /* Fixed height for square image */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
 .detail-name {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.icon-star {
-  font-size: 24px;
-  color: #ffc107;
-  cursor: pointer;
-}
-
-.icon-star.active {
-  color: gold;
-}
-
-.badge {
-  padding: 5px 10px;
-  border-radius: 3px;
-  color: white;
-  font-size: 14px;
-}
-
-.badge-green {
-  background-color: #28a745;
-}
-
-.badge-blue {
-  background-color: #007bff;
+  font-size: 24px; /* Font size for detail name */
+  font-weight: bold; /* Bold font weight */
+  margin-right: 10px; /* Margin on the right */
 }
 
 ul {
-  margin-top: 5px;
-  padding-left: 20px;
+  margin-top: 5px; /* Margin at the top */
+  padding-left: 20px; /* Left padding */
 }
 
 ul li {
-  list-style-type: disc;
+  list-style-type: disc; /* Disc bullet points for list items */
 }
 
 p {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Margin at the bottom */
 }

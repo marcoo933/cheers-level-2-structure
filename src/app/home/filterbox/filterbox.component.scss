@@ -1,69 +1,60 @@
 .filter-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+  display: flex; /* Flex container for filter box */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-bottom: 20px; /* Bottom margin */
 }
 
 .input-container {
-  position: relative;
-  width: 300px;
-  margin-bottom: 10px;
+  position: relative; /* Relative positioning for search input container */
+  width: 300px; /* Fixed width for input container */
+  margin-bottom: 10px; /* Bottom margin */
 }
 
 .search-icon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  color: #aaa;
-  pointer-events: none;
+  position: absolute; /* Absolute positioning for search icon */
+  top: 50%; /* Position from the top */
+  left: 10px; /* Position from the left */
+  transform: translateY(-50%); /* Center vertically */
+  color: #aaa; /* Icon color */
+  pointer-events: none; /* Ignore pointer events */
 }
 
 .search-input {
-  width: 100%;
-  padding: 10px 10px 10px 35px; /* Spazio per l'icona */
-  border: 2px solid #ccc;
-  border-radius: 25px;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
+  width: 100%; /* Full width */
+  padding: 10px 10px 10px 35px; /* Padding for input */
+  border: 2px solid #ccc; /* Border style */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
 .search-input:focus {
-  outline: none;
-  border-color: #007BFF;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+  outline: none; /* Remove outline on focus */
+  border-color: #007BFF; /* Highlight border color on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25); /* Box shadow on focus */
 }
 
 .search-input::placeholder {
-  color: #aaa;
-  font-style: italic;
+  color: #aaa; /* Placeholder text color */
+  font-style: italic; /* Italic style for placeholder */
 }
 
 .favorites-button {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  border: 2px solid #ccc;
-  border-radius: 25px;
-  background-color: #fff;
-  color: #555;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
+  display: flex; /* Flex container for favorites button */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Padding inside button */
+  border: 2px solid #ccc; /* Border style */
+  border-radius: 25px; /* Rounded corners */
+  background-color: #fff; /* Background color */
+  color: #555; /* Text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  outline: none; /* Remove outline */
 }
 
 .favorites-button:hover {
-  border-color: #007BFF;
-  color: #007BFF;
-}
-
-.favorites-button .fa-star {
-  margin-right: 8px;
-  color: transparent; /* Colore iniziale della stella */
-}
-
-.favorites-button .fa-star.favorites-active {
-  color: #FFD700; /* Colore giallo quando attivo */
+  border-color: #007BFF; /* Border color on hover */
+  color: #007BFF; /* Text color on hover */
 }

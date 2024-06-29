@@ -10,26 +10,30 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './filterbox.component.scss'
 })
 export class FilterboxComponent {
-  @Input() favoriteChange = true;
-  @Output() searchTermChange = new EventEmitter<string>();
-  @Output() showFavoriteChange = new EventEmitter<boolean>();
-  searchTerm: string = '';
-  showFavorites: boolean = false;
+  @Input() favoriteChange = true; // Input property to receive favoriteChange boolean from parent component
+  @Output() searchTermChange = new EventEmitter<string>(); // Output event emitter for notifying parent about search term change
+  @Output() showFavoriteChange = new EventEmitter<boolean>(); // Output event emitter for notifying parent about show favorite change
+  searchTerm: string = ''; // Variable to hold the search term entered by the user
+  showFavorites: boolean = false; // Flag to indicate whether to show favorite items
 
   ngOnChanges(changes: SimpleChanges) {
+    // Lifecycle hook called when input properties change
     if (changes['favoriteChange'] && this.showFavorites) {
-      this.showFavoriteChange.emit(this.showFavorites);
+      // If favoriteChange input changes and showFavorites is true
+      this.showFavoriteChange.emit(this.showFavorites); // Emit event to notify parent about showFavorites change
     }
   }
 
   onShowFavoriteChange() {
-    this.showFavorites = !this.showFavorites;
-    this.searchTerm = '';
-    this.showFavoriteChange.emit(this.showFavorites);
+    // Method called when user toggles showFavorites
+    this.showFavorites = !this.showFavorites; // Toggle showFavorites flag
+    this.searchTerm = ''; // Reset search term
+    this.showFavoriteChange.emit(this.showFavorites); // Emit event to notify parent about showFavorites change
   }
 
   onSearchTermChange() {
-    this.showFavorites = false;
-    this.searchTermChange.emit(this.searchTerm);
+    // Method called when search term changes
+    this.showFavorites = false; // Set showFavorites to false
+    this.searchTermChange.emit(this.searchTerm); // Emit event to notify parent about search term change
   }
 }
