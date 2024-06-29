@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,10 +10,17 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './filterbox.component.scss'
 })
 export class FilterboxComponent {
+  @Input() favoriteChange = true;
   @Output() searchTermChange = new EventEmitter<string>();
   @Output() showFavoriteChange = new EventEmitter<boolean>();
   searchTerm: string = '';
   showFavorites: boolean = false;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['favoriteChange'] && this.showFavorites) {
+      this.showFavoriteChange.emit(this.showFavorites);
+    }
+  }
 
   onShowFavoriteChange() {
     this.showFavorites = !this.showFavorites;

@@ -15,6 +15,7 @@ import { HomeComponent } from '../../home/home.component';
 })
 export class CocktailComponent {
   @Input() cocktail: Cocktail;
+  @Output() onFavoriteChange = new EventEmitter<null>();
   isFavorite: boolean = false;
   cocktailId: string;
   favorites: string[] = [];
@@ -43,6 +44,7 @@ export class CocktailComponent {
   toggleFavorite(cocktailId: string): void {
     this.coktailService.favorite = cocktailId;
     this.updateFavorite();
+    this.onFavoriteChange.emit();
   }
 
   updateFavorite() {

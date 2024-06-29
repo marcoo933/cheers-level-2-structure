@@ -1,8 +1,8 @@
-<app-filterbox (searchTermChange)="updateSearchTerm($event)" (showFavoriteChange)="toggleFavorites($event)"></app-filterbox>
+<app-filterbox (searchTermChange)="updateSearchTerm($event)"  [favoriteChange]="favoriteChange" (showFavoriteChange)="toggleFavorites($event)"></app-filterbox>
 
 <div class="cocktail-list" *ngIf="filteredCocktails.length !== 0;else noData">
   <div *ngFor="let cocktail of filteredCocktails" class="card" >
-    <app-cocktail [cocktail]="cocktail"></app-cocktail>
+    <app-cocktail [cocktail]="cocktail" (onFavoriteChange)="toggleFavorite()"></app-cocktail>
   </div>
 </div>
 

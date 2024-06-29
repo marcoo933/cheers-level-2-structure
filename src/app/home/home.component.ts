@@ -17,6 +17,7 @@ export class HomeComponent {
   cocktails: Cocktail[] = [];
   filteredCocktails: Cocktail[] = [];
   searchTerm: string = '';
+  favoriteChange: boolean = true;
 
   constructor(private cocktailService: CocktailService) { }
 
@@ -41,7 +42,9 @@ export class HomeComponent {
     }
   }
 
-
+  toggleFavorite() {
+    this.favoriteChange = !this.favoriteChange;
+  }
 
   filterCocktails(): void {
     const searchTermLower = this.searchTerm.toLowerCase();
