@@ -15,3 +15,30 @@
   min-height: 250px;
 }
 
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.no-data-icon {
+  font-size: 40px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.no-data-message {
+  font-size: 16px;
+  color: #333;
+}

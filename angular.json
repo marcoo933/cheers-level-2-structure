@@ -32,7 +32,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/mini.css/dist/mini-nord.min.css"
+              "node_modules/mini.css/dist/mini-nord.min.css",
+               "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           },

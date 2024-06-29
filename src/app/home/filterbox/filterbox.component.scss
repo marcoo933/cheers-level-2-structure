@@ -1,0 +1,69 @@
+.filter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Spazio per l'icona */
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.favorites-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.favorites-button:hover {
+  border-color: #007BFF;
+  color: #007BFF;
+}
+
+.favorites-button .fa-star {
+  margin-right: 8px;
+  color: transparent; /* Colore iniziale della stella */
+}
+
+.favorites-button .fa-star.favorites-active {
+  color: #FFD700; /* Colore giallo quando attivo */
+}

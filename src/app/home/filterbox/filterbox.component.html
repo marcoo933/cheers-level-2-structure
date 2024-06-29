@@ -1,0 +1,9 @@
+<div class="filter-box">
+  <div class="input-container">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" class="search-input" placeholder="Cocktail name" [(ngModel)]="searchTerm" (input)="onSearchTermChange()">
+  </div>
+  <button class="favorites-button" (click)="onShowFavoriteChange()">
+    <i class="fas fa-star" [class.favorites-active]="showFavorites"></i> Show Favorites
+  </button>
+</div>

@@ -9,6 +9,15 @@ import { Cocktail } from '../shared/interface';
 export class CocktailService {
   private apiUrl: string = '/cockails';
   private favorites: string[] = [];
+  private cocktails: Cocktail[] = [];
+
+  get cocktailsList(): Cocktail[] {
+    return this.cocktails;
+  }
+
+  set cocktailList(cocktails: Cocktail[]) {
+    this.cocktails = cocktails;
+  }
 
   set favorite(cocktailId: string) {
     const index = this.favorites.indexOf(cocktailId);
@@ -26,6 +35,12 @@ export class CocktailService {
       this.favorites = JSON.parse(favoritesString);
     }
     return this.favorites;
+  }
+
+  get favoriteList(): Cocktail[] {
+    return this.favorite
+      .map(id => this.cocktails.find(c => c.id === id))
+      .filter((cocktail): cocktail is Cocktail => cocktail !== undefined);
   }
 
   constructor(private http: HttpClient) { }

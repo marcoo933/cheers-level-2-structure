@@ -4,11 +4,12 @@ import { CocktailService } from '../services/cocktail.service';
 import { CommonModule } from '@angular/common';
 import { CocktailComponent } from '../shared/cocktail/cocktail.component';
 import { FormsModule } from '@angular/forms';
+import { FilterboxComponent } from './filterbox/filterbox.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,CocktailComponent, FormsModule],
+  imports: [CommonModule,CocktailComponent, FormsModule, FilterboxComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -21,10 +22,26 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.cocktailService.getCocktails().subscribe(data => {
+      this.cocktailService.cocktailList = data;
       this.cocktails = data;
       this.filteredCocktails = data;
     });
   }
+
+  updateSearchTerm(searchTerm: string) {
+    this.searchTerm = searchTerm;
+    this.filterCocktails();
+  }
+
+  toggleFavorites(active: boolean) {
+    if (active) {
+      this.filteredCocktails = this.cocktailService.favoriteList;
+    } else {
+      this.filteredCocktails = this.cocktails;
+    }
+  }
+
+
 
   filterCocktails(): void {
     const searchTermLower = this.searchTerm.toLowerCase();

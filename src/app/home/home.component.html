@@ -1,7 +1,16 @@
-<input type="text" placeholder="Cocktail name" [(ngModel)]="searchTerm" (input)="filterCocktails()">
+<app-filterbox (searchTermChange)="updateSearchTerm($event)" (showFavoriteChange)="toggleFavorites($event)"></app-filterbox>
 
-<div class="cocktail-list">
+<div class="cocktail-list" *ngIf="filteredCocktails.length !== 0;else noData">
   <div *ngFor="let cocktail of filteredCocktails" class="card" >
     <app-cocktail [cocktail]="cocktail"></app-cocktail>
   </div>
 </div>
+
+<ng-template #noData>
+  <div class="no-data-container">
+    <div class="no-data-icon">
+      <i class="fas fa-exclamation-triangle"></i>
+    </div>
+    <div class="no-data-message">No data available for the selected filters</div>
+  </div>
+</ng-template>
