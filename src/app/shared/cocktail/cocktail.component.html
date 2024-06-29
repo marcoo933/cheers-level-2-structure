@@ -22,35 +22,28 @@
   <div class="detail-body" *ngIf="isDetail">
     <div class="detail-content">
       <div class="detail-left">
-        <a routerLink="/home" class="btn-back">Back to Home</a>
+        <a routerLink="/home" class="btn-back">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
         <img [src]="cocktail.imageUrl" alt="{{ cocktail.name }}" class="cocktail-image-square">
       </div>
       <div class="detail-right">
-
-        <p>
-          <span class="detail-name">{{ cocktail.name }}</span>
-          <span class="icon-star" [class.active]="isFavorite" (click)="toggleFavorite(cocktail.id)">
-          </span>
+        <p class="detail-name">{{ cocktail.name }}
+          <span class="icon-star" [class.active]="isFavorite" (click)="toggleFavorite(cocktail.id)"></span>
         </p>
 
-        <p>
-          <strong>Type:</strong>
+        <p><strong>Type:</strong>
           <span class="badge" [ngClass]="{'badge-green': !cocktail.isAlcoholic, 'badge-blue': cocktail.isAlcoholic}">
             {{ cocktail.isAlcoholic ? 'Alcoholic' : 'Non alcoholic' }}
           </span>
         </p>
 
-        <p>
-          <strong>Ingredients:</strong>
+        <p><strong>Ingredients:</strong></p>
         <ul>
           <li *ngFor="let ingredient of cocktail.ingredients">{{ ingredient }}</li>
         </ul>
 
-        <p>
-          <strong>Instructions:</strong>
-          <span>{{ cocktail.instructions }}</span>
-        </p>
-
+        <p><strong>Instructions:</strong> {{ cocktail.instructions }}</p>
       </div>
     </div>
   </div>

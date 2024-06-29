@@ -54,69 +54,94 @@
   background-color: #5bc0de;
 }
 
-// DETAIL
+.detail-body {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 .detail-content {
   display: flex;
 }
 
 .detail-left {
   flex: 1;
-  margin-top: 2%;
+  text-align: center;
 }
 
 .detail-right {
-  flex: 3;
+  flex: 2;
   padding-left: 20px;
 }
 
-.detail-right h3 {
-  display: flex;
-  align-items: center;
-}
-
-.detail-name{
-  font-weight: bold;
-  font-size: 20px;
-}
-.detail-right .icon-star {
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.detail-right p {
-  margin-bottom: 10px;
-}
-
-.detail-right .badge {
-  margin-right: 10px;
-}
-
-.detail-right ul {
-  //list-style-type: none;
-  padding: 0;
-}
-
-.detail-right ul li {
-  margin-bottom: 5px;
-}
-
-.cocktail-image-square {
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 20px;
-  margin-top: 5%;
-}
-
 .btn-back {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px 10px;
   background-color: #007bff;
   color: white;
   text-decoration: none;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
+}
+
+.btn-back i {
+  margin-right: 5px; /* Spazio tra l'icona e il testo */
 }
 
 .btn-back:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cambia colore al passaggio del mouse */
 }
 
+.cocktail-image-square {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.icon-star {
+  font-size: 24px;
+  color: #ffc107;
+  cursor: pointer;
+}
+
+.icon-star.active {
+  color: gold;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+}
+
+.badge-green {
+  background-color: #28a745;
+}
+
+.badge-blue {
+  background-color: #007bff;
+}
+
+ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+p {
+  margin-bottom: 10px;
+}
